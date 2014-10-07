@@ -1,0 +1,12 @@
+services:
+    test_test.admin.persona:
+        class: Test\Bundle\TestBundle\Admin\PersonaAdmin
+        arguments: [~, Test\Bundle\TestBundle\Entity\Persona, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Persona}
+
+    test_test.admin.telefono:
+        class: Test\Bundle\TestBundle\Admin\TelefonoAdmin
+        arguments: [~, Test\Bundle\TestBundle\Entity\Telefono, TestTestBundle:TelefonoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Telefono}
